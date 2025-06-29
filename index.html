@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yash Kamble - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+  <style>
+    .dark-mode {
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+    }
+    .dark-mode nav, .dark-mode header, .dark-mode footer {
+      background-color: #111;
+      color: #f5f5f5;
+    }
+    .dark-mode nav a {
+      color: #00aaff;
+    }
+    .resume-button {
+      padding: 10px 20px;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Yash Sunil Kamble</h1>
+    <p>AI & DS Student | Python Developer | Web Developer | ChatGPT Enthusiast</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button onclick="toggleDarkMode()" style="margin-left: 20px; padding: 5px 10px;">Toggle Dark Mode</button>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a 2nd-year B.Tech student in Artificial Intelligence & Data Science,
+      passionate about building real-world AI and web-based solutions. I have
+      hands-on experience in Python, HTML, CSS, and working with AI tools like ChatGPT.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>HTML, CSS, JavaScript (learning)</li>
+      <li>Web Development</li>
+      <li>ChatGPT & AI Tools</li>
+      <li>GitHub, VS Code</li>
+      <li>Stock Market Basics</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Portfolio Website</strong> – This website showcasing my skills and projects.</li>
+      <li><strong>Stock Market Analyzer (Python)</strong> – Script to analyze stock data using APIs.</li>
+      <li><strong>ChatGPT Bot UI</strong> – (Planned) A UI that integrates ChatGPT for smart interactions.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: yashkamble93205@gmail.com</p>
+    <p>Phone: +91 7506774539</p>
+    <p>LinkedIn: <a href="#">[Add your LinkedIn URL]</a></p>
+    <br>
+    <a class="resume-button" href="resume.pdf" download>Download Resume</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Yash Kamble. All rights reserved.</p>
+  </footer>
+</body>
+</html>
