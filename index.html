@@ -5,31 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yash Kamble - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
   <style>
     .dark-mode {
       background-color: #1a1a1a;
       color: #f5f5f5;
     }
-    .dark-mode nav, .dark-mode header, .dark-mode footer {
+
+    .dark-mode nav,
+    .dark-mode header,
+    .dark-mode footer {
       background-color: #111;
       color: #f5f5f5;
     }
+
     .dark-mode nav a {
       color: #00aaff;
     }
-    .resume-button {
-      padding: 10px 20px;
-      background: #007acc;
-      color: white;
-      border: none;
-      border-radius: 5px;
+
+    .dark-toggle-icon {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
       cursor: pointer;
-      text-decoration: none;
+      font-size: 22px;
+      user-select: none;
     }
   </style>
 </head>
@@ -44,7 +44,8 @@
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <button onclick="toggleDarkMode()" style="margin-left: 20px; padding: 5px 10px;">Toggle Dark Mode</button>
+    <a href="resume.html" target="_blank">View Resume</a>
+    <span id="darkModeIcon" class="dark-toggle-icon" onclick="toggleDarkMode()">🌙</span>
   </nav>
 
   <section id="about">
@@ -82,12 +83,25 @@
     <p>Email: yashkamble93205@gmail.com</p>
     <p>Phone: +91 7506774539</p>
     <p>LinkedIn: <a href="#">[Add your LinkedIn URL]</a></p>
-    <br>
-    <a class="resume-button" href="resume.pdf" download>Download Resume</a>
   </section>
 
   <footer>
     <p>&copy; 2025 Yash Kamble. All rights reserved.</p>
   </footer>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const icon = document.getElementById('darkModeIcon');
+      icon.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    }
+
+    // Set initial icon on page load
+    window.onload = () => {
+      const icon = document.getElementById('darkModeIcon');
+      icon.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    };
+  </script>
 </body>
 </html>
